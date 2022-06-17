@@ -1,0 +1,971 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ################# Navbar Styling ####################################### */
+
+#navbar{
+
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    
+}
+
+.nav1{
+
+    width: 85%;
+    height: 110px;
+    margin: auto;
+    
+    display: flex;
+    
+    
+
+}
+
+.menupart{
+
+    width: 65%;
+    height: 100%;
+    display: flex;
+    
+
+}
+
+div.logoimage{
+
+    width: 30%;
+    height: 100%;
+
+}
+
+.logoimage img{
+
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+}
+
+.list{
+
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+
+}
+
+.list li{
+
+    list-style-type: none;
+    margin-top: 55px;
+
+}
+
+.list li a{
+
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+.list li a:hover{
+
+    text-decoration: underline;
+    
+
+}
+
+.orderpart{
+
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.butn1{
+
+    width: 150px;
+    height: 45px;
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.butn1:hover{
+    background-color: rgb(193, 10, 10);
+}
+
+.img2{
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+}
+
+.img2 img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.img3{
+
+    display: block;
+    width: 40px;
+    height: 40px;
+
+}
+
+.img3 img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.nav2{
+
+    background-color: black;
+    text-align: center;
+    height: 40px;
+    color: white;
+    padding-top: 10px;
+    font-size: 16px;
+
+}
+
+.nav2:hover{
+    background-color: rgb(47, 46, 46);
+    cursor: pointer;
+}
+
+
+/* ******************** Section1 Styling ********************************* */
+
+
+.section1{
+
+    height: 105vh;
+    width: 100%;
+    
+
+}
+
+.upperpart{
+
+    width: 100%;
+    height: 90%;
+    background-image: url(https://media.istockphoto.com/photos/american-fast-food-on-white-picture-id458534755?k=20&m=458534755&s=612x612&w=0&h=anNRYHrMXW-sxc6C-x5qnsEzo6lqJfyG1AyftFYCtkg=);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 160px;
+    padding-top: 100px;
+
+}
+
+.upperpart2{
+
+    width: 50%;
+    height: auto;
+    
+    
+}
+
+.upperpart2>p:nth-child(1){
+
+    color: red;
+    font-weight: 600;
+
+}
+
+.upperpart2>h1{
+
+    margin-top: 60px;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+
+}
+
+.upperpart2>p:nth-child(3){
+
+    color: white;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+.upperpart2>a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-top: 40px;
+}
+
+.upperpart2>a:hover{
+    text-decoration: underline;
+}
+
+.lowerpart{
+    width: 100%;
+    height: 13%;
+    background-color: red;
+}
+
+.lowerpart2{
+
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lowerpart2>p{
+
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+
+}
+
+
+.butn2{
+
+    width: 150px;
+    height: 45px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* ******************** Section2 Styling ********************************* */
+
+
+.section2{
+
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+.featured-items1{
+
+    width: 80%;
+    margin: auto;
+    border-bottom: 3px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+
+}
+
+
+.featured-items1>p{
+
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+
+}
+
+.items{
+
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    height: auto;
+    
+
+}
+
+.items>div:nth-child(1){
+
+    margin-right: 30px;
+
+}
+
+.items>div{
+
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    
+
+}
+
+.items>div:hover{
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.items>div div{
+
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+
+}
+
+.items>div div>img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.items>div p{
+
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 5px;
+
+}
+
+.featured-items2{
+    width: 80%;
+    height: auto;
+    border-bottom: 3px solid  black;
+    margin: auto;
+    padding: 50px;
+    margin-bottom: 100px;
+}
+
+.featured-items2>div{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2, 350px);
+    gap: 50px;
+
+}
+
+.featured-items2>div>div:hover{
+
+    outline: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.featured-items2>div>div:nth-child(1){
+
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+.featured-items2>div>div:nth-child(1) h5{
+
+    font-size: 16px;
+    font-weight: bold;
+    
+
+}
+
+.featured-items2>div>div:nth-child(1) h1{
+
+    font-weight: bold;
+    font-size: 60px;
+    margin-top: 25px;
+
+}
+
+.featured-items2>div>div:nth-child(2){
+
+    background-image: url(./Image6.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+
+}
+
+.featured-items2>div>div:nth-child(2) div{
+
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    
+
+}
+
+.featured-items2>div>div:nth-child(2) div>h1{
+
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+
+}
+
+.featured-items2>div>div:nth-child(2) div>p{
+
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px
+
+}
+
+.featured-items2>div>div:nth-child(3){
+
+    background-image: url(./Image7.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+.featured-items2>div>div:nth-child(3) div{
+
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    
+
+}
+
+.featured-items2>div>div:nth-child(3) div>h1{
+
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+
+}
+
+.featured-items2>div>div:nth-child(3) div>p{
+
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px
+
+}
+
+.featured-items2>div>div:nth-child(4){
+
+    background-image: url(./Image8.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+
+}
+
+.featured-items2>div>div:nth-child(4) div{
+
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    
+
+}
+
+.featured-items2>div>div:nth-child(4) div>h1{
+
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+
+}
+
+.featured-items2>div>div:nth-child(4) div>p{
+
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px
+
+}
+
+
+/* ########################## Section3 Styling ############################### */
+
+
+.section3{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://media4.giphy.com/media/or3YvoqY4adAA/giphy.gif?cid=ecf05e47v3ar9h83vd19idkie9qcmv9unqe5g7v1nu1qkk9s&rid=giphy.gif&ct=g);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding-top: 150px; */
+    position: relative;
+
+}
+
+.video-container{
+
+    width: 80%;
+    height: auto;
+position: absolute;
+top: 24%;
+left: 10%;    
+    
+}
+
+.video-container>div:nth-child(1){
+
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    position: relative;
+
+}
+
+
+.video-container>div:nth-child(1)>h1{
+
+    
+    width: 50%;
+    height: 100%;
+    color: white;
+    font-size: 60px;
+
+}
+
+.video-container>div:nth-child(1)>div{
+
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+
+}
+
+.video-container>div:nth-child(1)>div>p{
+
+    font-size: 20px;
+    font-weight: 600px;
+    color: white;
+    margin-right: 15px;
+}
+
+.video-container>div:nth-child(1)>div>div{
+
+    width: 70px;
+    height: 70px;
+
+}
+
+.video-container>div:nth-child(1)>div>div img{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+
+
+.video-container>div:nth-child(2){
+    width: 100%;
+    height: 500px;
+    margin-bottom: 200px;
+    background-color: rgb(253, 248, 248);
+    border-radius: 5px;
+    padding: 50px;
+    margin-bottom: 100px;
+
+}
+
+.video-container>div:nth-child(2)>div{
+
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.video-container>div:nth-child(2)>div>div:nth-child(1){
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.video-container>div:nth-child(2)>div>div:nth-child(1) img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.video-container>div:nth-child(2)>div>div:nth-child(2){
+
+    width: 45%;
+    height: 100%;
+    padding-left: 20px;
+    padding-top: 100px;
+
+}
+
+.video-container>div:nth-child(2)>div>div:nth-child(2) h1{
+
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/* ################################ Section 4 Styling ##################################### */
+
+
+.section4{
+
+    margin-top: 400px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 100px;
+
+}
+
+.quick-part{
+
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    border-bottom: 3px solid black;
+
+}
+
+.quick-part>h1{
+
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+
+
+}
+
+.quick-part>div{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 40px;
+    margin-bottom: 40px;
+
+}
+
+.quick-part>div>div:hover{
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.quick-part>div>div>div{
+
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+
+}
+
+.quick-part>div>div>div img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.quick-part>div>div>p{
+
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.quick-part>div>div>p:last-child{
+
+    margin-bottom: 20px;
+}
+
+/* ################################ Section 5 Styling ##################################### */
+
+
+.section5{
+
+    width: 100%;
+    height: auto;
+    
+}
+
+.section5>div:nth-child(1){
+
+    width: 100%;
+    height: 450px;
+    background-color: rgb(198, 5, 5);
+
+}
+
+.section5>div:nth-child(1)>div{
+
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+
+
+}
+
+.section5>div:nth-child(1)>div h5{
+
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.section5>div:nth-child(1)>div h1{
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.section5>div:nth-child(1)>div p{
+
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 40px;
+
+}
+
+.butn3{
+
+    width: 150px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.section5>div:nth-child(2){
+
+    width: 100%;
+    height: 450px;
+    background-image: url(./Image17.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.section5>div:nth-child(3){
+
+    width: 85%;
+    margin: auto;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.section5>div:nth-child(3)>div:nth-child(1){
+
+    width:50%;
+    height:100%;
+    padding-top: 120px;
+
+}
+
+.section5>div:nth-child(3)>div:nth-child(1) h1{
+
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+
+.section5>div:nth-child(3)>div:nth-child(1) p{
+
+    color: gray;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 40px;
+
+}
+
+.section5>div:nth-child(3)>div:nth-child(2){
+
+    width:45%;
+    height:100%;
+
+}
+
+.section5>div:nth-child(3)>div:nth-child(2) img{
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/* ########################### footer Styling ############################### */
+
+
+.footer{
+
+    width: 100%;
+    height: auto;
+    background-color: rgb(34, 34, 34);
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer>div{
+
+    width: 85%;
+    height: 100%;
+    margin: auto;
+}
+
+.footer>div>div:nth-child(1) p{
+
+    color: white;
+    margin-bottom: 15px;
+    font-size: 15px;
+
+}
+
+.footer>div>div:nth-child(2){
+
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+
+}
+
+.footer>div>div:nth-child(2) div{
+
+    width: 15%;
+    height: 100%;
+    
+
+}
+
+.footer>div>div:nth-child(2)>div:nth-child(1) img{
+
+    width: 100%;
+    height: auto;
+
+}
+
+.footer>div>div:nth-child(2)>div h5{
+
+    color:white;
+    margin-bottom: 10px;
+    font-size: 18px;
+
+}
+
+.footer>div>div:nth-child(2)>div>ul li{
+
+    list-style-type: none;
+    margin-bottom: 8px;
+    
+
+}
+
+.footer>div>div:nth-child(2)>div>ul>li a{
+
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+
+
+}
+
+.footer>div>div:nth-child(2)>div>ul>li a:hover{
+
+    text-decoration: underline;
+
+}
+
+.footer>div>div:nth-child(3){
+
+    width: 70%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+.footer>div>div:nth-child(3)>div{
+
+    width: 40%;
+    height: 100%;
+
+}
+
+.rights{
+
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+
+}
+
+.fab{
+
+    color: white;
+    margin-right: 30px;
+    font-size: 30px;
+
+}

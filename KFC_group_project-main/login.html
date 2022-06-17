@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 0px solid red;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: 480px;
+            width: 35%;
+            margin: auto;
+            margin-top: 40px;
+            border: none;
+
+        }
+        #basicForm{
+            border: 0px solid red;
+            display:flex;
+            flex-direction: column;
+            padding: 20px;
+            /* grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, auto); */
+            
+        }
+        #heading{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(245, 236, 236);
+            
+        }
+        #container>h2{
+            display: flex;
+            padding-top: 30px;
+            /* justify-content: center; */
+            margin-left: 7%;
+            line-height: 20px;
+            
+        }
+        #container>div{
+            display: flex;
+            margin-left: 35px;
+            margin-top: -25px;
+            cursor: pointer;
+        }
+        input{
+            /* padding: 10px 0px; */
+            padding-left: 10px;
+            width: 100%;
+            border-radius: px;
+            border: 1px solid slategrey;
+            height: 30px;
+            background: transparent;
+            border-bottom: 1px solid black;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            
+            
+        }
+        #heading{
+            height: 60px;
+            
+            font-size: 25px;
+            
+
+        }
+        label{
+            font-size: 15px;
+        }
+      
+        .btn{
+            border-radius: 15px;
+            height: 32px;
+            border: none;
+            
+        }
+     .para{
+         font-size: 12px;
+     }
+     .button{
+         text-align: right;
+     }
+     
+    </style>
+</head>
+<body>
+    <div id = "heading"><img src="https://www.pngitem.com/pimgs/m/42-429253_kentucky-fried-chicken-kentucky-fried-chicken-logo-text.png"/>
+    </div>
+    <div id = "container">
+        <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg" alt="kfc">
+        <h2>LOG IN TO KFC</h2>
+        
+        <form id = "basicForm">
+            <div>
+                <label for = "">Email</label><br>
+                <input id = "email" type = "text" /><br><br>
+            </div>
+            <div>
+                <label for = "">Password</label><br>
+                <input id = "password" type = "password" /><br><br>
+            </div>
+            <hr>
+            <a href="" id="forgot">Forgot password?</a><hr>
+            <div class="button">
+                
+
+            </div>
+           <!-- <input type = "submit" value = "Log in"/><br><br> -->
+          
+            <div class="para">By logging into the application or procedding as a guest,you agree to our
+                <span>
+                    <a rel="noreferrer" target="_blank" href="https://kfc.com/privacy-policy" class="">Privacy Policy</a>
+                </span>
+                and
+                <span>
+                    <a rel="noreferrer" target="_blank" href="https://www.kfc.com/terms-of-use">Terms of Use</a>
+                </span>
+            </div><br><br>
+            
+            <button class="btn"> <b>Log In </b></button>
+            <hr>
+            </form>
+              
+        <div>Don't have an account?
+            <a href="index.html"> Join Now</a></div>
+    </div>
+            
+</body>
+
+<script>
+    document.querySelector("#basicForm").addEventListener("submit", loginForm);
+
+    var signupObjData = JSON.parse(localStorage.getItem("registrationData"));
+
+    var referSignUp = document.querySelector("a");
+    referSignUp.href = "index.html";
+
+    function loginForm(){
+        event.preventDefault();
+
+        // var loginData = [];
+
+        var loginObj = {
+            email: basicForm.email.value,
+            password: basicForm.password.value
+        }
+
+        // loginData.push(loginObj);
+        //console.log(loginData);
+
+
+
+        // if (signupObjData === null){
+        //     alert("Please register yourself first and try again");
+        // }
+        if (signupObjData.email === loginObj.email && signupObjData.password === loginObj.password){
+            alert("Signed in successfully");
+            localStorage.setItem("login", JSON.stringify(signupObjData));
+            window.location.href="homePage.html"
+        }
+        else{
+            alert("Your email and password does not match with our records.");
+        }
+    }
+    // checkCredentials(loginData);
+
+    // function checkCredentials(data){
+    //     data.forEach(function(elem, index){
+    //         if (elem.email == )
+    //     })
+    // }
+</script>

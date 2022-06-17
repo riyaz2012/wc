@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+     .cats{
+       font-size: 30px;
+       font-weight: bolder;
+     }
+      #nav {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        /* border: 2px solid black; */
+        position: sticky;
+        top: 30px;
+        font-size: 18px;
+      }
+      #nav>a {
+        padding: 10px;
+        text-decoration: none;
+        color: gray;
+        /* border: 1px dashed red; */
+      }
+      #nav>a:hover{
+        text-decoration: underline;
+        color: black;
+      }
+      #container{
+          display: flex;
+          flex-direction: column;
+          /* border:5px solid pink; */
+          width:70%;
+          margin-left: auto;
+          margin-top: 10px;
+        }
+        #featured,#buckets,#tenders,#sandwich,#fc,#ppb,#alc,#sides,#sauces,#desserts,#drinks {
+            /* border: 2px solid salmon; */
+            width: 100%;
+            margin-left:auto;
+            margin-right: auto;
+            margin-top: 0px;
+            gap:15px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            line-height: 95%;
+        }
+        #featured {
+          grid-template-rows: repeat(4,380px);
+        } 
+        
+        #tenders{
+          grid-template-rows: repeat(3,380px);
+        }
+        #alc,#sides,#sauces,#fc,#sandwich,#buckets{
+          grid-template-rows: repeat(2,380px);
+        }
+        #ppb,#desserts{
+          grid-template-rows: repeat(1,380px);
+        }
+        #top{
+          display: flex;
+          margin-left: auto;
+          margin-top: -400px;
+          width: 70%;
+          height: 350px;
+          object-fit: contain;
+          /* border: 2px solid blue; */
+          background-color: #f8f7f5;
+        }
+        
+       
+  
+     #container>div>div {
+            /* border: 2px solid rebeccapurple; */
+            border-radius: 5px;
+            /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+            
+        }
+        #mainimg{
+          width: 60%;
+        }
+        #mainimg>img{
+          
+width: 90%;
+height: 100%;
+        }
+        #container img{
+            width: 90%;
+            height: 60%;
+            /* border-bottom: 0.5px solid black; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 5px;
+          
+        }
+        button{
+          background-color: #e4002b;
+          color: white;
+          padding: 5px;
+          margin-bottom: -10px;
+          border: none;
+          border-radius: 10px;
+        }
+        p{
+          line-height: 5px;
+        }
+        #nav>img{
+          width: 60px;
+          height: 60px;
+        }
+        #navbar{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          /* border: 2px solid rebeccapurple; */
+        }
+        #navbar a {
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+        }
+        #navbar a:hover {
+          text-decoration: underline;
+        }
+        a>img{
+          width: 45px;
+          height: 45px;
+          vertical-align: middle;
+        }
+        #custname {
+          background-color: #e4002b;
+          color: white;
+          padding-left: 5px;
+          padding-right: 5px;
+          border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+  <div id="navbar">
+    <a href="homePage.html">
+      <div><img src="./Image1.png" width="120px" height="60px"></div>
+    </a>
+    <a href="product_page.html">MENU</a>
+    <a href="profile.html">
+      <div id="custname"></div>
+    </a>
+    <a href="product_page.html"><button>Start Order</button></a>
+    <a href="cart.html">
+    <img alt="cart" src="./image3.png">
+  
+  </a>
+  </div>
+  <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg">
+
+  <div id="nav">
+    <h2 style="font-weight:800;">KFC® MENU</h2>
+    <a href="product_page.html#featured">Featured</a>
+    <a href="product_page.html#buckets">Buckets</a>
+    <a href="product_page.html#tenders">Tenders</a>
+    <a href="product_page.html#sandwich">Sandwiches</a>
+    <a href="product_page.html#fc">Fried Chicken</a>
+    <a href="product_page.html#ppb">Pot Pies & Bowls</a>
+    <a href="product_page.html#alc">A La Carte</a>
+    <a href="product_page.html#sides">Sides</a>
+    <a href="product_page.html#sauces">Sauces</a>
+    <a href="product_page.html#desserts">Desserts</a>
+    <a href="product_page.html#drinks">Drinks</a>
+  </div>
+  
+  <div id="top">
+    <div class="head">
+      <h1>10% OFF ON ALL ORDERS<br>COUPON:masai10</h1>
+    </div>
+    <div id="mainimg">
+    <img src="https://images.ctfassets.net/9tka4b3550oc/Pq667frOtU9m5YT9ZkifO/f65d345b5c58f2d0eff6527713c72caf/ChickenHero_Mobile_Nobackground-1.png">
+  </div>
+  </div>
+  
+  <div id="container">
+    <p class="cats">FEATURED</p>
+    <div id="featured"></div>
+    <p class="cats">BUCKETS</p>
+    <div id="buckets"></div>
+    <p class="cats">TENDERS</p>
+    <div id="tenders"></div>
+    <p class="cats">SANDWICHES</p>
+    <div id="sandwich"></div>
+    <p class="cats">FRIED CHICKEN</p>
+    <div id="fc"></div>
+    <p class="cats">POT PIES & BOWLS</p>
+    <div id="ppb"></div>
+    <p class="cats">A LA CARTE</p>
+    <div id="alc"></div>
+    <p class="cats">SIDES</p>
+    <div id="sides"></div>
+    <p class="cats">SAUCES</p>
+    <div id="sauces"></div>
+    <p class="cats">DESSERTS</p>
+    <div id="desserts"></div>
+    <p class="cats">DRINKS</p>
+    <div id="drinks"></div>
+  </div>
+</body>
+</html>
+<script>
+    var featured=[
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-sidesloversCOBmeal?q=75",
+      name:"Sides Lovers 8 pc. Chicken Meal",
+      calories:"calories:2600",
+      price:"300",
+      category:"Featured",
+      prod_id:"f1", 
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-sidesloverstendersmeal?q=75",
+      name:"Sides Lovers 8 pc. Tenders Meal",
+      calories:"calories:3000",
+      price:"300",
+      category:"Featured",
+      prod_id:"f2",  
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-TendersBucketForOne?q=75",
+      name:"Tenders Bucket for One",
+      calories:"calories:1700",
+      price:"150",
+      category:"Featured",
+      prod_id:"f3",   
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
+      name:"8 pc. Meal",
+      calories:"calories:2500",
+      price:"300",
+      category:"Featured",
+      prod_id:"f4",    
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-8pcTendersMeal-test?q=75",
+      name:"8 pc. Tenders Meal",
+      calories:"calories:2910",
+      price:"300",
+      category:"Featured",
+      prod_id:"f5",    
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-sandwichandtendersmeal?q=75",
+      name:"Sandwiches and Tenders Meal",
+      calories:"calories:4900",
+      price:"470",
+      category:"Featured",
+      prod_id:"f6",    
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-sandwichandsidesmeal?q=75",
+      name:"Sandwiches and Slides",
+      calories:"calories:3040",
+      price:"250",
+      category:"Featured",
+      prod_id:"f7",   
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-cknsndcombo?q=75",
+      name:"KFC Chicken Sandwich Combo",
+      calories:"calories:800",
+      price:"100",
+      category:"Featured",
+      prod_id:"f8",   
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-10pcfeast?q=75",
+      name:"10 Piece Feast",
+      calories:"calories:4200",
+      price:"300",
+      category:"Featured",
+      prod_id:"f9",    
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-FamousBowlFillUp?q=75",
+      name:"Famous Bowl Fill Up",
+      calories:"calories:900",
+      price:"85",
+      category:"Featured",
+      prod_id:"f10",    
+    },  
+]
+    var drinks=[
+  
+
+
+
+ {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-Pepsi?q=75",
+      name:"Pepsi",
+      calories:"calories:380",
+      price:"32",
+      category:"Drinks",
+      prod_id:"d1",    
+    },   
+     {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-dietPepsi?q=75",
+      name:"Diet Pepsi",
+      calories:"calories:380",
+      price:"32",
+      category:"Drinks",
+      prod_id:"d2",    
+    },    
+     {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-mtndew?q=75",
+      name:"Mountain Dew",
+      calories:"calories:380",
+      price:"32",
+      category:"Drinks",
+      prod_id:"d3",    
+    },    
+     {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-LemMed?q=75",
+      name:"Lemonade",
+      calories:"calories:200",
+      price:"37",
+      category:"Drinks",
+      prod_id:"d4",    
+    },    
+     {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-BevBucket?q=75",
+      name:"2L Beverage",
+      calories:"calories:800",
+      price:"62",
+      category:"Drinks",
+      prod_id:"d5",    
+    },    
+     {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-bottledWater?q=75",
+      name:"Bottled Water",
+      calories:"calories:0",
+      price:"20",
+      category:"Drinks",
+      prod_id:"d6",    
+    },     
+]
+    var desserts=[
+{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-1Cookie?q=75",
+      name:"Chocolate Chip Cookie",
+      calories:"calories:120",
+      price:"10",
+      category:"Desserts",
+      prod_id:"des1",    
+    },
+
+      {
+      img_url:"https://images.ctfassets.net/9tka4b3550oc/1XFzu9NKNtkE8UpD3plXJ3/c8a6893c77aaeb16c82a0e2b43e2c59c/2.jpg?q=75&w=640",
+      name:"Chocolate Chip Cake",
+      calories:"calories:300",
+      price:"70",
+      category:"Desserts",
+      prod_id:"des2",    
+    },
+]
+    var buckets=[ {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-8pcBucketMealStandard?q=75",
+      name:"8 pc. Meal",
+      calories:"calories:2600",
+      price:"300",
+      category:"Buckets",
+      prod_id:"b1",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-sidesloversCOBmeal?q=75",
+      name:"Sides Lovers 8 pc. Chicken Meal",
+      calories:"calories:4700",
+      price:"300",
+      category:"Buckets",
+      prod_id:"b2",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-10pcfeast?q=75",
+      name:"10 pc. Feast",
+      calories:"calories:4200",
+      price:"300",
+      category:"Buckets",
+      prod_id:"b3",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-12pcBucketDark?q=75",
+      name:"12 pc. Chicken Bucket",
+      calories:"calories:3000",
+      price:"260",
+      category:"Buckets",
+      prod_id:"b4",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-16pcBucketStandard?q=75",
+      name:"16 pc. Chicken Bucket",
+      calories:"calories:9600",
+      price:"340",
+      category:"Buckets",
+      prod_id:"b5",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-16pcBucketMealStandard?q=75",
+      name:"16 pc. Meal",
+      calories:"calories:9600",
+      price:"450",
+      category:"Buckets",
+      prod_id:"b6",    
+    },
+]
+    var tenders=[{     
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-new16pcTenders?q=75",
+      name:"16 pc. Tenders Bucket",
+      calories:"calories:4800",
+      price:"340",
+      category:"Tenders",
+      prod_id:"t1",    
+    },
+
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-new12pcTenders?q=75",
+      name:"12 pc. Tenders Bucket",
+      calories:"calories:2000",
+      price:"260",
+      category:"Tenders",
+      prod_id:"t2",    
+    },
+
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-new8pcTenders?q=75",
+      name:"8 pc. Tenders Bucket",
+      calories:"calories:2000",
+      price:"190",
+      category:"Tenders",
+      prod_id:"t3",    
+    },
+
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-new16pcTendersMeal?q=75",
+      name:"16 pc. Tenders Meal",
+      calories:"calories:500",
+      price:"500",
+      category:"Tenders",
+      prod_id:"t4",    
+    },
+
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-TendersBucketForOne?q=75",
+      name:"Tenders Bucket for One",
+      calories:"calories:1700",
+      price:"150",
+      category:"Tenders",
+      prod_id:"t5",    
+    },
+
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-5pcTendersBox?q=75",
+      name:"5 pc. Tenders Box",
+      calories:"calories:1800",
+      price:"150",
+      category:"Tenders",
+      prod_id:"t6",    
+    },
+
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-5pcNHTendersCombo2?q=75",
+      name:"5 pc. Nashville Hot Tenders Combo",
+      calories:"calories:1400",
+      price:"130",
+      category:"Tenders",
+      prod_id:"t7",    
+    },
+]
+    var sauces=[{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-KFCSauce?q=75",
+      name:"KFC Sauce",
+      calories:"calories:90",
+      price:"25",
+      category:"Sauces",
+      prod_id:"sa1",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-HoneyBBQ?q=75",
+      name:"Honey BBQ",
+      calories:"calories:40",
+      price:"25",
+      category:"Sauces",
+      prod_id:"sa2",    
+    },
+    
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-HoneyMustard?q=75",
+      name:"Honey Mustard",
+      calories:"calories:120",
+      price:"25",
+      category:"Sauces",
+      prod_id:"sa3",    
+    },
+    
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-Ranch?q=75",
+      name:"Classic Ranch",
+      calories:"calories:100",
+      price:"25",
+      category:"Sauces",
+      prod_id:"sa4",    
+    },
+    
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-honeySauce2?q=75",
+      name:"Honey Sauce",
+      calories:"calories:30",
+      price:"0",
+      category:"Sauces",
+      prod_id:"sa5",    
+    },
+    
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-hotSauce2?q=75",
+      name:"Hot Sauce",
+      calories:"calories:10",
+      price:"0",
+      category:"Sauces",
+      prod_id:"sa6",    
+    },]
+    var sides=[{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-IndFries?q=75",
+      name:"Secret Recipe Fries",
+      calories:"calories:900",
+      price:"40",
+      category:"Sides",
+      prod_id:"si1",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-IndMashGravy?q=75",
+      name:"Mashed Potatoes & Gravy",
+      calories:"calories:500",
+      price:"40",
+      category:"Sides",
+      prod_id:"si2",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-IndMacCheese?q=75",
+      name:"Mac & Cheese",
+      calories:"calories:540",
+      price:"40",
+      category:"Sides",
+      prod_id:"si3",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-IndColeslaw?q=75",
+      name:"Cole Slaw",
+      calories:"calories:640",
+      price:"40",
+      category:"Sides",
+      prod_id:"si4",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-IndGravy?q=75",
+      name:"Gravy",
+      calories:"calories:130",
+      price:"14",
+      category:"Sides",
+      prod_id:"si5",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-IndCorn?q=75",
+      name:"Whole Kernel Corn",
+      calories:"calories:280",
+      price:"40",
+      category:"Sides",
+      prod_id:"si6",    
+    },
+]
+    var alc=[{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-AlcBreast?q=75",
+      name:"A La Carte Breast",
+      calories:"calories:530",
+      price:"40",
+      category:"A La Carte",
+      prod_id:"alc1",    
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-AlcLeg?q=75",
+      name:"A La Carte Drum",
+      calories:"calories:170",
+      price:"30",
+      category:"A La Carte",
+      prod_id:"alc2",    
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-AlcThigh?q=75",
+      name:"A La Carte Thigh",
+      calories:"calories:330",
+      price:"30",
+      category:"A La Carte",
+      prod_id:"alc3",    
+    },
+      {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-AlcWing?q=75",
+      name:"A La Carte Wing",
+      calories:"calories:500",
+      price:"25",
+      category:"A La Carte",
+      prod_id:"alc4",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-PotPie?q=75",
+      name:"Pot Pie",
+      calories:"calories:720",
+      price:"70",
+      category:"A La Carte",
+      prod_id:"alc5",    
+    },]
+    var ppb=[ {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-FamousBowlFillUp?q=75",
+      name:"Famous Bowl Fill Up",
+      calories:"calories:1100",
+      price:"85",
+      category:"Pot Pies & Bowls",
+      prod_id:"ppb1",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-PotPieFillUp?q=75",
+      name:"Pot Pie Fill Up",
+      calories:"calories:1100",
+      price:"82",
+      category:"Pot Pies & Bowls",
+      prod_id:"ppb2",    
+    },
+]
+    var fc=[{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-1BrFU?q=75",
+      name:"1 pc Breast Combo",
+      calories:"calories:1100",
+      price:"82",
+      category:"Fried-Chicken",
+      prod_id:"fc1",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-2DTFU?q=75",
+      name:"2 pc Drum & Thigh Fill Up",
+      calories:"calories:1150",
+      price:"92",
+      category:"Fried-Chicken",
+      prod_id:"fc2",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-3pcCombo1B1T1W?q=75",
+      name:"3 pc. Chicken Combo -2 Breasts, 1 Wing",
+      calories:"calories:1700",
+      price:"115",
+      category:"Fried-Chicken",
+      prod_id:"fc3",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-3pcCombo1B1T1W?q=75",
+      name:"3 pc. Chicken Combo -Breast, Thigh and Wing",
+      calories:"calories:1600",
+      price:"105",
+      category:"Fried-Chicken",
+      prod_id:"fc4",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-6WingsUnsauced?q=75",
+      name:"Kentucky Fried Wings Combo",
+      calories:"calories:1100",
+      price:"66",
+      category:"Fried-Chicken",
+      prod_id:"fc5",    
+    },
+    ]
+    var sandwich=[ {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-ChLtlCombo?q=75",
+      name:"Chicken Little Combo",
+      calories:"calories:800",
+      price:"100",
+      category:"Sandwiches",
+      prod_id:"s1",    
+    },
+    {
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-AlcChLtl?q=75",
+      name:"Chicken Little",
+      calories:"calories:500",
+      price:"360",
+      category:"Sandwiches",
+      prod_id:"s2",    
+    },
+
+{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-cknsndalc?q=75",
+      name:"KFC Chicken Sandwich",
+      calories:"calories:800",
+      price:"540",
+      category:"Sandwiches",
+      prod_id:"s3",    
+    },
+
+{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-cknsndbigbox?q=75",
+      name:"KFC Chicken Sandwich Box",
+      calories:"calories:1200",
+      price:"150",
+      category:"Sandwiches",
+      prod_id:"s4",    
+    },
+
+{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-sandwichandtendersmeal?q=75",
+      name:"Sandwich and Tenders Meal",
+      calories:"calories:6800",
+      price:"470",
+      category:"Sandwiches",
+      prod_id:"s5",    
+    },
+
+{
+      img_url:"https://digitaleat.kfc.com/menus/image/bare/kfc-cknsndcombo?q=75",
+      name:"KFC Chicken Sandwich Combo",
+      calories:"calories:1000",
+      price:"100",
+      category:"Sandwiches",
+      prod_id:"s6",    
+    },]
+
+
+localStorage.setItem("kfc_featured",JSON.stringify(featured))
+localStorage.setItem("kfc_buckets",JSON.stringify(buckets))
+localStorage.setItem("kfc_tenders",JSON.stringify(tenders))
+localStorage.setItem("kfc_sandwiches",JSON.stringify(sandwich))
+localStorage.setItem("kfc_fried_chicken",JSON.stringify(fc))
+localStorage.setItem("kfc_pot_pie_bowls",JSON.stringify(ppb))
+localStorage.setItem("kfc_a_la_carte",JSON.stringify(alc))
+localStorage.setItem("kfc_sides",JSON.stringify(sides))
+localStorage.setItem("kfc_sauces",JSON.stringify(sauces))
+localStorage.setItem("kfc_desserts",JSON.stringify(desserts))
+localStorage.setItem("kfc_drinks",JSON.stringify(drinks))
+  
+//For FEATURED
+var boxa=document.querySelector("#featured")
+
+  function showfeatured(data)
+  {
+    boxa.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    url.loading="lazy";
+    url.ariaHidden="true";
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+    
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+    //Add to Cart
+    var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxa.append(box)
+    })
+
+  }
+  showfeatured(featured)
+
+  
+  // For BUCKETS
+  var boxb=document.querySelector("#buckets")
+
+  function showbuckets(data)
+  {
+    boxb.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxb.append(box)
+    })
+
+  }
+  showbuckets(buckets)
+
+  
+  // for TENDERS
+  var boxc=document.querySelector("#tenders")
+
+  function showtenders(data)
+  {
+    boxc.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxc.append(box)
+    })
+
+  }
+  showtenders(tenders)
+
+  //For SANDWICHES
+  var boxd=document.querySelector("#sandwich")
+
+  function showsandwich(data)
+  {
+    boxd.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxd.append(box)
+    })
+
+  }
+  showsandwich(sandwich)
+
+//FRIED CHICKEN
+var boxe=document.querySelector("#fc")
+
+  function showfc(data)
+  {
+    boxe.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxe.append(box)
+    })
+
+  }
+  showfc(fc)  
+
+  //POT PIE BOWLS
+  var boxf=document.querySelector("#ppb")
+
+  function showppb(data)
+  {
+    boxf.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxf.append(box)
+    })
+
+  }
+  showppb(ppb)
+
+  // A LA CARTE
+  var boxg=document.querySelector("#alc")
+
+  function showalc(data)
+  {
+    boxg.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxg.append(box)
+    })
+
+  }
+  showalc(alc)
+
+  //SIDES
+  var boxh=document.querySelector("#sides")
+
+  function showsides(data)
+  {
+    boxh.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxh.append(box)
+    })
+
+  }
+  showsides(sides)
+
+  //SAUCES
+  var boxi=document.querySelector("#sauces")
+
+  function showsauces(data)
+  {
+    boxi.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxi.append(box)
+    })
+
+  }
+  showsauces(sauces)
+
+  // DESSERTS
+  var boxj=document.querySelector("#desserts")
+
+  function showdesserts(data)
+  {
+    boxj.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxj.append(box)
+    })
+
+  }
+  showdesserts(desserts)
+
+  // DRINKS
+  var boxk=document.querySelector("#drinks")
+
+  function showdrinks(data)
+  {
+    boxk.innerHTML=null;   
+
+    data.forEach(function(ele){
+//to avoid appending at the end of previous data when sorting
+  
+      
+    var box=document.createElement("div")
+    var url=document.createElement("img")
+    url.setAttribute("src",ele.img_url)
+    var name=document.createElement("h4")
+    name.innerText=ele.name;
+    var price=document.createElement("p")
+    price.innerText="₹"+ele.price;
+    var calor=document.createElement("p")
+    calor.innerText=ele.calories;
+  
+
+    var acart=document.createElement("button")
+    acart.innerText="Add to Bag";
+     //Add to Cart
+     var cartlogo=document.createElement("img")
+    cartlogo.src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"
+    cartlogo.style.width="20px"
+    cartlogo.style.height="20px"
+    cartlogo.style.border="0px"
+    cartlogo.style.boxShadow="none"
+    cartlogo.style.marginLeft="5px"
+    cartlogo.style.verticalAlign="middle"
+    acart.append(cartlogo)
+    acart.addEventListener("click",function(){
+      add2cart(ele)
+    })
+
+    box.append(url,name,price,calor,acart)
+    boxk.append(box)
+    })
+
+  }
+  showdrinks(drinks)
+
+// ADD 2 CART
+
+let cartlsdata=JSON.parse(localStorage.getItem("productcart"))||[]
+  function add2cart(ele){
+  cartlsdata.push(ele);
+  localStorage.setItem("productcart",JSON.stringify(cartlsdata))
+alert("Product added successfully")
+}
+
+var cname=localStorage.getItem("customername")
+var cname2=document.createElement("h3")
+cname2.innerText=cname;
+document.querySelector("#custname").append(cname2)
+
+</script>

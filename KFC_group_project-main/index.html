@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 0px solid rgb(224, 7, 7);
+        
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            height: 700px;
+            width: 35%;
+            margin: auto;
+            margin-top: 30px;
+            
+        }
+        #basicForm{
+            border: 0px solid red;
+            display:flex;
+            flex-direction: column;
+            padding: 30px;
+            /* grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, auto); */
+
+        }
+    
+        
+        
+        #heading{
+            display: flex;
+            justify-content: center;
+            height: 60px;
+            
+            background-color: rgb(245, 236, 236);
+
+        }
+        #container>h2{
+            display: flex;
+            padding-top: 10px;
+            margin-left: 20px;
+        }
+        #container>div{
+            display: flex;
+            /* justify-content: center; */
+            margin-top: -25px;
+            cursor: pointer;
+            margin-left: 30px;
+        }
+        input{
+            padding-left: 10px;
+            width: 100%;
+            border-radius: px;
+            border: 1px solid slategrey;
+            height: 20px;
+            background: transparent;
+            border-bottom: 1px solid black;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+        }
+       
+        .btn{
+            border-radius: 15px;
+            height: 28px;
+            border: none;
+        }
+        .link{
+            font-size: 13px;
+        }
+    p{
+        font-size: 12px;
+    }
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div id = "heading">
+        <img src="https://www.pngitem.com/pimgs/m/42-429253_kentucky-fried-chicken-kentucky-fried-chicken-logo-text.png">
+    </div>
+    <div id = "container">
+        <img src="https://online.kfc.co.in/static/media/Stripes_Small_OffersIcon.87fc6256.svg">
+        <h2>Create An Account</h2>
+        <form id = "basicForm">
+            <div>
+                <div>
+                    <label for = "">First Name</label><br>
+                    <input id = "name" type = "text" /><br><br>
+                </div>
+                <div>
+                    <label for = "">Last Name</label><br>
+                    <input id = "lname" type = "text" /><br><br>
+                </div>
+                <label for = "">Email</label><br>
+                <input id = "email" type = "text" /><br><br>
+            </div>
+            <div>
+                <label for = "">Phone number</label><br>
+                <input id = "number" type = "number" /><br><br>
+            </div>
+            <div>
+                <label for = "">Password</label><br>
+                <input id = "password" type = "text" /><br><br>
+            </div>
+            <div>
+                <label for = ""> Confirm Password</label><br>
+                <input id = "password1" type = "text" /><br><br>
+            </div>
+        
+         
+            <div class="link">By selecting the box you agree to our
+                <span>
+                    <a rel="noreferrer" target="_blank"href="https://www.kfc.com/privacy-policy">Privacy Policy </a>
+                </span>
+                and 
+                <span>
+                    <a rel="noreferrer" target="_blank" href="" class="">Terms of Use</a>
+                </span>
+                <p > Signup for Email updates and Promotions</p>
+            </div><hr>
+            <!-- <input type = "submit" value = "SIGN UP"/><br><br> -->
+        <button class="btn">Create Account</button> <br>
+       
+        </form>
+        
+        <div >Already a member?
+            <a>Log In</a></div>
+    </div>
+</body>
+
+<script>
+    document.querySelector("#basicForm").addEventListener("submit", registrationData);
+
+    var referSignUp = document.querySelector("div>a");
+    referSignUp.href = "login.html";
+
+    function registrationData(){
+        event.preventDefault();
+
+        // var formData = JSON.parse(localStorage.getItem("registrationData")) || [];
+
+        var formObj = {
+            email: basicForm.email.value,
+            mobile: basicForm.number.value,
+            password: basicForm.password.value,
+            name:basicForm.name.value+" "+basicForm.lname.value,
+        }
+        // formData.push(formObj);
+
+        localStorage.setItem("registrationData", JSON.stringify(formObj));
+        window.location.href = "login.html";
+    }
+</script>
+</html> 
+ 

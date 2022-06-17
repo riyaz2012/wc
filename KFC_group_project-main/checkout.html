@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: sans-serif;
+    }
+#form {
+    width: 40%;
+    margin: auto;
+    border-radius: 5px;
+    /* border: 2px solid saddlebrown; */
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    background-color: rgb(203, 221, 215);
+    
+}
+#form+div {
+    display: flex;
+    justify-content: space-around;
+}
+#form img {
+    width: 70px;
+    height: 50px;
+    margin-left: 12%;
+}
+input{
+    display: block;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+}
+input:last-child{
+    background-color: rgb(40, 201, 40);
+    border: 0.5px solid black;
+}
+#amount {
+    text-align: center;
+}
+</style>
+<body>
+    <div id="amount"></div>
+    <div id="form">
+    <form id="carddetails">
+        <input type="number" placeholder="Enter Card Number" id="cardnum"><br>
+        <input type="name" placeholder="Name" id="name"><br>
+        <input type="number" placeholder="PIN" id="pin"><br>
+        <input type="number" placeholder="CVV" id="cvv"><br>
+        <input type="submit" href="">
+
+    </form>
+    <div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/RuPay.svg/2560px-RuPay.svg.png">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/800px-Mastercard-logo.svg.png">
+    <img src="https://logowik.com/content/uploads/images/verified-by-visa6450.jpg">
+</div>
+</div>
+
+</body>
+</html>
+<script>
+    var cardinfo={
+        name:"Hemant Sharma",
+        cardnum:"1234567812345678",
+        pin:"1234",
+        cvv:"123"}
+        console.log(cardinfo)
+        document.querySelector("#carddetails").addEventListener("submit",storedata)
+        
+        var div1=document.querySelector("#amount");
+        var amou=localStorage.getItem("amount")
+        // console.log(amou)
+        var bill=document.createElement("h2")
+        bill.innerText="Total Bill - "+amou;
+        div1.append(bill)
+
+        function storedata(){
+            event.preventDefault()
+        var obj={
+            name:carddetails.name.value,
+            cardnum:carddetails.cardnum.value,
+            pin:carddetails.pin.value,
+            cvv:carddetails.cvv.value,
+        }
+        
+        // console.log(obj)
+if(cardinfo.name==obj.name&&cardinfo.cardnum==obj.cardnum&&cardinfo.pin==obj.pin&&cardinfo.cvv==obj.cvv)
+ {
+     console.log("YIPPEE")
+     window.location.href="otp.html"
+ } 
+  else
+  alert("Wrong")
+  }
+</script>

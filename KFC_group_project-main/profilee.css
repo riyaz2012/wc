@@ -1,0 +1,131 @@
+.container{
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    margin-top: 70px;
+   justify-content: space-between; 
+}
+.container>div:nth-child(1){
+    width: 25%;
+ background-color: #202124;
+ border-radius: 10px;
+}
+.container>div:nth-child(2){
+    
+    height: 800px;
+    width: 70%;
+    
+    
+}
+.box>div:nth-child(1){
+    height: 73px;
+    
+}
+.box>div:nth-child(2){
+    height: 695px;
+  background-color: #f8f7f5;
+  border-radius: 10px;
+}
+h2{
+    font-size: 38px;
+    font-family: Helvetica;
+   font-weight: bolder;
+}
+h3{
+    font-size: 20px;
+    width: 500px;
+    line-height: 40px;
+    margin-left: 100px;
+    margin-top: 100px;
+    position: absolute;
+     font-family: Helvetica;
+    font-weight: bolder;
+}
+.box>div>div{
+    width: 45%;
+    height: 70%;
+    margin-left: 50%;
+    margin-top: -17%;
+    
+}
+img{
+    width: 100%; 
+}
+button{
+   
+   margin-top: 34%;
+   margin-left: 10%;
+   height: 50px;
+   width: 15%;
+   border-radius: 10px;
+   border: 0px;
+   background-color: red;
+   color: white;
+   font-weight: 500;
+   font-family: Helvetica;
+}
+button:hover{
+   background-color: rgb(231, 25, 25);
+   
+}
+.first{
+   
+   height: 55px;
+   display: flex;
+   width: 30%;
+   margin-left: 60px;
+}
+.first>div{
+   width: 20px;
+  margin: auto;
+   height: 70px;
+   background-color: red;  
+}
+.sec{
+ 
+   height: 300px;
+   margin-top: 60px;
+   width: 70%;
+   margin-left: 50px;
+}
+.sec>div{
+   height: 100px;
+   width: 45%;
+   border-radius: 200px;
+   margin-bottom: 40px;
+}
+.sec>p{
+   color: white;
+   font-family: Helvetica;
+}
+.thir{
+  
+   height: 250px;
+   margin-top: 50px;
+   width: 70%;
+   margin-left: 50px;
+}
+a{
+   text-decoration: none;
+}
+.thir>a>p{
+   color: rgb(141, 126, 126);
+   font-size: 16px;
+  text-decoration: none;
+   font-family: Helvetica;
+   
+}
+h1{
+font-family: Helvetica;
+color: white;
+}
+.thir>a>p:hover{
+   color: white;
+}
+img{
+   border-radius: 100px;
+}
+.sec>a>p{
+     color: white;
+}

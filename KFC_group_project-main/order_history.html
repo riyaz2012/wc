@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="order.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="first">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sec">
+                <div><img src="kfc-logo-profile.jpg" alt=""></div>
+                <div id="customer"></div>
+                <p>Log Out</p>
+            </div>
+            <div class="thir">
+                <a href="order_history.html"><p>Order History</p></a>
+                <a href="payment.html"><p>Payment</p></a>
+                <a href="Account.html"><p>Account Settings</p></a>
+               
+            </div>
+        </div>
+    
+        <div class="box">
+          <div><h2>PAST ORDERS</h2></div>
+          <div>
+              <h3>NO PAST ORDERS AVAILABLE. LET'S START AN ORDER!</h3>
+              
+             <a href="product_page.html"><button>Start Order</button></a>
+              <div><img src="https://www.kfc.com/_next/static/images/empty-bucket-835c4f452fae1420a288523f2c1ead2b.png" alt=""></div>
+           
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var details=JSON.parse(localStorage.getItem("registrationData"))
+    var name=details.name;
+    var st=""
+    for(var i=0;i<name.length;i++)
+    {
+        st+=name[i];
+    if(name[i]==" ")
+      break;
+    }
+
+    var cname=document.createElement("h1")
+    cname.innerText="Howdy! "+st;
+    document.querySelector("#customer").append(cname)
+    console.log(st)
+</script>

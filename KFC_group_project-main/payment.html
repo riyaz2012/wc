@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="first">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sec">
+                <div><img src="kfc-logo-profile.jpg" alt=""></div>
+                <div id="customer"></div>
+                <p>Log Out</p>
+            </div>
+            <div class="thir">
+                <a href="order_history.html"><p>Order History</p></a>
+                
+                <a href="payment.html"><p>Payment</p></a>
+                <p>Account Settings</p>
+            </div>
+        </div>
+    
+        <div class="box">
+          <div><h2>PAYMENTS</h2></div>
+         <p>You haven’t created any methods of payment yet</p>
+         <div>
+             <button>Pick Store to Add Payment</button>
+         </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    var details=JSON.parse(localStorage.getItem("registrationData"))
+    var name=details.name;
+    var st=""
+    for(var i=0;i<name.length;i++)
+    {
+        st+=name[i];
+    if(name[i]==" ")
+      break;
+    }
+
+    var cname=document.createElement("h1")
+    cname.innerText="Howdy! "+st;
+    document.querySelector("#customer").append(cname)
+    console.log(st)
+</script>

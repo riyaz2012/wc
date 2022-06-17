@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .heading{
+            /* border: 3px solid red; */
+            width: 80%;
+            margin: auto;
+        }
+        .heading>:nth-child(1){
+            height: 2%;
+            width: 4%;}
+
+        h1{
+            font-size: 30px;
+            font-weight: bold;
+            font-family:Arial, Helvetica, sans-serif "National 2 Condensed";
+            text-transform: uppercase;
+        }
+        #bigcontainer{
+display: flex;
+/* border: 3px solid saddlebrown; */
+        }
+        #container{
+            font-family: sans-serif;
+            margin-top: 10px;
+            margin-left: 0px;           
+            /* border: 1px dashed red; */
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(auto,380px);
+            gap: 20px;
+        }
+        #container img {
+            width: 90%;
+            height: 60%;
+            /* border-bottom: 0.5px solid black; */
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 5px;
+        }
+        button{
+            padding: 5px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        p{
+            line-height: 5px;
+            margin-left: 10px;
+        }
+        #receipt {
+            display: block;
+            height: 300px;
+            width: 25%;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+        #navbar{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        #dcode+button{
+            margin-top: 50px;
+            background-color:#e4002b;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 45px 10px 45px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="navbar">
+    <a href="product_page.html">BACK TO MENU</a>
+</div>
+        
+            <div class = "heading">
+                <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Keerbergen_Belgium.svg/630px-Keerbergen_Belgium.svg.png?20151231072215" alt = "KFCStripes"/>
+                <h1>My Bag</h1>
+            </div>
+            <div id="bigcontainer">
+                <div id = "container"></div>
+                <div id="receipt">
+                </div>
+            </div>
+            
+</body>
+</html>
+
+<script>
+    var cartItems = JSON.parse(localStorage.getItem("productcart"))||[];
+    console.log(cartItems)
+    var bigc=document.querySelector("#bigcontainer")
+    var container = document.querySelector("#container");
+    if(cartItems.length==0)
+    {
+        console.log("empty")
+        bigc.style.backgroundColor="#f8f7f5"
+        bigc.style.display="flex";
+        bigc.style.width="80%";
+        bigc.style.margin="auto"
+        bigc.innerHTML=`
+       <div>
+    <h1 style="font-size:40px" id="ifcartnull">YOUR BAG IS<br>EMPTY.LETS<br>START AN<br>ORDER!<h1>
+    <div style="background-color:red; padding:10px; border-radius:10px">
+        <a style="color:white; text-decoration:none" href="product_page.html" >Start Ordering</a>
+        </div>
+    </div>
+    <img style="margin-left:200px;" width="400" height="400" src="https://www.kfc.com/_next/static/images/empty-bucket-835c4f452fae1420a288523f2c1ead2b.png">
+    `
+    }
+    else if(cartItems!=null){
+    
+    let pricedata=0;
+    function displayCartItems(data){
+        container.innerHTML = null;
+        data.forEach(function(ele, index){
+            var box = document.createElement("div");
+
+            var image = document.createElement("img");
+            image.src = ele.img_url;
+
+            var name = document.createElement("h4");
+            name.innerText = ele.name;
+            name.style.marginLeft="10px"
+
+            var price=document.createElement("p")
+            price.innerText="₹"+ele.price;
+           
+            var category=document.createElement("p")
+            category.innerText=ele.category;
+
+            var deleteButton = document.createElement("button");
+            deleteButton.innerText = "Remove";
+            deleteButton.setAttribute("class", "deleteCart");
+            deleteButton.style.backgroundColor = "tomato";
+            deleteButton.style.border = "none";
+            deleteButton.style.cursor = "pointer";
+            deleteButton.addEventListener("click", function(){
+                deleteItem(ele, index);
+            });
+            
+
+            box.append(image, name, price, category, deleteButton);
+            container.append(box);
+            // if(data)
+            {pricedata+=Number(ele.price)}
+        });
+    }
+
+        displayCartItems(cartItems);
+
+        var receipt=document.querySelector("#receipt");
+        var numitems=document.createElement("h3");
+        numitems.innerText="Total Items - "+cartItems.length;
+
+        const totalprice=document.createElement("h2")
+        totalprice.innerText="Bag Value :-"+"₹"+pricedata;
+        //to enter coupon code 
+        var disc=document.createElement("input")
+        disc.placeholder="coupon code"
+        var apply=document.createElement("button")
+        apply.innerText="Apply"
+        apply.setAttribute("id","dcode")
+        apply.addEventListener("click",validcoupon)
+        function validcoupon()
+        {
+            var coupon=disc.value;
+            if(coupon=="masai10")
+            pricedata=pricedata*0.9;
+            totalprice.innerText="Bag Value :-"+"₹"+pricedata;
+        }
+        
+        
+        //checkout button
+        var chkout=document.createElement("button");
+        chkout.innerText="Checkout"
+        receipt.append(numitems,totalprice,disc,apply,chkout)
+        chkout.addEventListener("click",function(){
+            localStorage.setItem("amount",pricedata)
+            window.location.href="checkout.html"
+        })
+        
+        console.log(pricedata)
+        
+        //to delete an item from cart
+        function deleteItem(ele, index){
+            /* cartItems = cartItems.filter(function(ele){
+                return ele.prodId != id;
+            }) */
+            cartItems.splice(index, 1);
+            pricedata=pricedata-(Number(ele.price))
+            localStorage.setItem("productcart", JSON.stringify(cartItems));
+            
+            displayCartItems(cartItems);
+            totalprice.innerText="Bag Value :-"+pricedata;
+            
+            
+            window.location.reload();
+            
+            
+            
+            
+           
+            /* alert("Items has been removed from your cart successfully"); */
+        }
+
+    }
+
+  
+</script>
